@@ -1,4 +1,4 @@
-# 📋copy-latex 
+# 📋 ChatGPT X Notion
 
 A beginner-friendly Chrome extension that adds a copy button to LaTeX equations on webpages — made with simplicity, readability, and learning in mind.
 
