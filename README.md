@@ -32,9 +32,13 @@ You're tired of tutorials that are either too basic or too advanced
 
 # 📁Folder Structure
 copy-latex/
+
 ├── manifest.json         # Extension metadata
+
 ├── content.js            # Core logic injected into pages
+
 └── README.md             # You're reading it!
+
 📸 Demo
 
 
