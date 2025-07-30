@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    padding: 0.5rem;
+    width: 400px;
+    height: 250px;
+    margin: 0;
+}
+
+.copy-icon {
+    width: max-content;
+    height: 100%;
+    align-self: center;
+}
+
+.copy-icon svg {
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+#math {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    min-height: 50px;
+}
+
+.wrapper:hover:has(.block:empty) .block::after,
+.block:empty:focus::after {
+    content: "type something here";
+    color: #aaa;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    pointer-events: none;
+    font-style: italic;
+}
+
+.block {
+    width: 100%;
+    padding: 8px;
+    min-height: 20px;
+    position: relative;
+    transition: border-color 0.4s;
+}
+
+.block::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-left: 2px solid transparent;
+    transition: border-color 0.4s, width 0.4s, opacity 0.3s;
+}
+
+.block:hover::before {
+    width: 2px;
+    opacity: 1;
+}
+
+.block:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.equation:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.equation {
+    background: #f4f3f3;
+    padding: 8px;
+    width: 100%;
+    min-height: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.4s;
+}
+
+.interior {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.eqText {
+    font-style: italic;
+    color: #ccc;
+    user-select: none;
+}
+
+.editor {
+    min-height: 20px;
+    width: 100%;
+}
+
+#wrapper {
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /* allows clicks to pass through unless child intercepts */
+    z-index: 999;
+}
+
+#menu {
+    position: absolute;
+    display: none;
+    pointer-events: auto;
+    /* to allow menu interaction */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}

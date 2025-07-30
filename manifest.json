@@ -22,5 +22,15 @@
         "content.js"
       ]
     }
-  ]
+  ],
+  "web_accessible_resources": [
+  {
+    "resources": [
+      "katex/katex.min.js",
+      "katex/katex.min.css",
+      "katex/fonts/*"
+    ],
+    "matches": ["<all_urls>"]
+  }
+]
 }
