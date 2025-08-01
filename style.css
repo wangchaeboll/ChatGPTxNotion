@@ -133,3 +133,8 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
+.katex {
+    display: inline-block;
+    width: 100%;
+}
